@@ -5,7 +5,7 @@ excess = 0
 max_num = -10**10
 sum_num = 0
 
-for _ in range(n):
+for i in range(n):
     s = input()
 
     if s == 'error':
