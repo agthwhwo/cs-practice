@@ -31,4 +31,11 @@ def above_average(names, scores):
             result.append(names[i])
 
     return result
-    
+
+if __name__ == "__main__":
+    names =  ["Аня", "Боря", "Вика"]
+    scores = [7.0,   9.0,    9.0]
+    print(winner(names,scores))
+    print(average(scores))
+    print(ranking(names,scores))
+    print(above_average(names,scores))
