@@ -1,15 +1,13 @@
-names =  ["Аня", "Боря", "Вика"]
-scores = [7.0,   9.0,    9.0]
-
 def winner(names, scores):
-    num = 0
-    index = 0
-    for i in range(len(scores)):
-        if scores[i] > num:
-            num = scores[i]
-            index = i
+    if len(names) == 0:
+        return ''
 
-    return names[index]
+    best = 0
+    for i in range(1,len(scores)):
+        if scores[i] < scores[best]:
+            best = i
+
+    return names[best]
 
 def average(scores: list[float]) -> float:
     if len(scores) != 0:
