@@ -11,4 +11,8 @@ def winner(names, scores):
 
     return names[index]
 
-print(winner(names,scores))
+def average(scores: list[float]) -> float:
+    if len(scores) != 0:
+        return round(sum(scores) / len(scores),2)
+    else:
+        return 0
