@@ -1,13 +1,12 @@
 def winner(names, scores):
-    if len(names) == 0:
-        return ''
+    num = 0
+    index = 0
+    for i in range(len(scores)):
+        if scores[i] > num:
+            num = scores[i]
+            index = i
 
-    best = 0
-    for i in range(1,len(scores)):
-        if scores[i] < scores[best]:
-            best = i
-
-    return names[best]
+    return names[index]
 
 def average(scores: list[float]) -> float:
     if len(scores) != 0:
