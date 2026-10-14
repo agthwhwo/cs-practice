@@ -1,6 +1,6 @@
 def read_rows(lines):
     rows = []
-    header = None
+    head = None
 
     for line in lines:
         line = line.strip()
