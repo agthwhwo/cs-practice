@@ -27,7 +27,7 @@ def read_rows(lines):
     return rows
 
     
-def count_types(rows: list[dict]) -> dict:
+def count_types(rows):
     counts = {}
 
     for row in rows:
@@ -40,8 +40,22 @@ def count_types(rows: list[dict]) -> dict:
 
     return counts
 
-def total_minutes(rows, kind):
-    pass
+def total_minutes(rows,kind):
+    total = 0.0
+
+    for row in rows:
+        if row["тип"] != kind:
+            continue
+
+        value = row["минуты"].replace(",", ".")
+
+        try:
+            total += float(value)
+        except ValueError:
+            continue
+
+    return round(total, 1)
+
 
 def to_csv(counts):
     pass
