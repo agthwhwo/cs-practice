@@ -1,4 +1,4 @@
-def count_times(values):
+def count_items(values):
     result = dict()
     for value in values:
         result[value] = result.get(value,0) + 1
