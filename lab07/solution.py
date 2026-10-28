@@ -21,4 +21,12 @@ def column_means(matrix):
     if result.size != 0:
         return np.round(result.mean(axis=0),6).tolist()
     else:
-        return []
+        return list()
+
+def column_range(matrix, column):
+    arr = np.asarray(matrix,dtype = float)
+    if arr.size != 0:
+        result = float(arr[:, column].max() - arr[:, column].min())
+        return round(result,6)
+    else:
+        return 0.0
