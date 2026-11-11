@@ -32,3 +32,24 @@ print(temperatures[0, :])
 print(temperatures[:, -1])
 print(temperatures[:2, 1:])
 print(temperatures[:2, 1:3])
+
+matrix = np.arange(1, 26).reshape(5, 5)
+a1 = matrix[:3, :]
+print(a1)
+print(a1.shape)
+
+a2 = matrix[-2:, :]
+print(a2)
+print(a2.shape)
+
+a3 = matrix[:, :2]
+print(a3)
+print(a3.shape)
+
+a4 = matrix[1:4, 2:5]
+print(a4)
+print(a4.shape)
+
+a5 = matrix[-2:, -2:]
+print(a5)
+print(a5.shape)
