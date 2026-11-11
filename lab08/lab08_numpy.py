@@ -12,3 +12,10 @@ print("shape:", hours.shape)
 print("ndim:", hours.ndim)
 print("size:", hours.size)
 print("dtype:", hours.dtype)
+
+
+print(hours[2])
+print(hours[-1])
+print(hours[2:6])
+print(hours[::2])
+print(hours[::-1])
