@@ -6,7 +6,7 @@ def make_hours():
 
 
 def vector_report(values):
-    arr = np.array(values)
+    arr = np.asarray(values)
     return {
         "third": arr[2].tolist(),
         "last": arr[-1].tolist(),
@@ -17,13 +17,22 @@ def vector_report(values):
     
     
 def change_vector(values):
-    arr = np.array(values)
-    new_arr = arr.copy().astype(float)
+    arr = np.asarray(values)
+    new_arr = arr.copy()
     new_arr[2:5] = 99
     new_arr[::2] = -1
     return new_arr.tolist()
 
 
-print(change_vector([0, 3, 6, 9, 12, 15, 18, 21]))
+
+def cap_above(values, limit):
+    arr = np.asarray(values)
+    new_arr = arr.copy()
+    new_arr[new_arr > limit] = limit
+    return new_arr.tolist()
+
     
     
+def celsius_to_fahrenheit(values):
+    arr = np.asarray(values)
+    return (arr * 9 / 5 + 32).tolist()
