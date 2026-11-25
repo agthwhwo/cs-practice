@@ -36,3 +36,8 @@ def solve_system(matrix, vector):
     np_matr = np.array(matrix)
     np_vect = np.array(vector)
     return (np.linalg.solve(np_matr, np_vect)).ToList()
+
+
+def tensor_channel_mean(tensor):
+    arr = np.array(tensor)
+    return arr.mean(axis=-1).tolist()
