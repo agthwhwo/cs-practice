@@ -28,14 +28,14 @@ def matrix_multiply(left, right):
 
 
 def transpose_matrix(matrix):
-    return np.array(matrix).T.toList()
+    return np.array(matrix).T.tolist()
 
 
 
 def solve_system(matrix, vector):
     np_matr = np.array(matrix)
     np_vect = np.array(vector)
-    return (np.linalg.solve(np_matr, np_vect)).toList()
+    return (np.linalg.solve(np_matr, np_vect)).tolist()
 
 
 def tensor_channel_mean(tensor):
