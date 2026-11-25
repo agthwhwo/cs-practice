@@ -41,3 +41,9 @@ def solve_system(matrix, vector):
 def tensor_channel_mean(tensor):
     arr = np.array(tensor)
     return arr.mean(axis=-1).tolist()
+
+
+def point_distance(first, second):
+    np_first = np.array(first)
+    np_second = np.array(second)
+    return np.linalg.norm(np_first - np_second)
