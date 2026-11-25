@@ -29,3 +29,10 @@ def matrix_multiply(left, right):
 
 def transpose_matrix(matrix):
     return np.array(matrix).T.ToList()
+
+
+
+def solve_system(matrix, vector):
+    np_matr = np.array(matrix)
+    np_vect = np.array(vector)
+    return (np.linalg.solve(np_matr, np_vect)).ToList()
