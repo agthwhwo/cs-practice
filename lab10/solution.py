@@ -25,3 +25,7 @@ def matrix_multiply(left, right):
     np_left = np.array(left)
     np_right = np.array(right)
     return (np_left @ np_right).Tolist()
+
+
+def transpose_matrix(matrix):
+    return np.array(matrix).T.ToList()
