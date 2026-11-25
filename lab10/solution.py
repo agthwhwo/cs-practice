@@ -2,11 +2,11 @@ import numpy as np
 
 
 def make_table(rows, columns):
-    return np.arange(rows * columns).reshape(rows,columns).Tolist()
+    return np.arange(rows * columns).reshape(rows,columns).tolist()
 
 def rectangle(matrix, row_start, row_stop, column_start, column_stop):
     arr_m = np.array(matrix)
-    return arr_m[row_start:row_stop,column_start:column_stop].Tolist()
+    return arr_m[row_start:row_stop,column_start:column_stop].tolist()
 
 
 def replace_rectangle(matrix, row_start, row_stop, column_start, column_stop, value):
@@ -18,24 +18,24 @@ def replace_rectangle(matrix, row_start, row_stop, column_start, column_stop, va
 def matrix_vector_product(matrix, vector):
     np_matr = np.array(matrix)
     np_vect = np.array(vector)
-    return (np_matr @ np_vect).Tolist()
+    return (np_matr @ np_vect).tolist()
 
 
 def matrix_multiply(left, right):
     np_left = np.array(left)
     np_right = np.array(right)
-    return (np_left @ np_right).Tolist()
+    return (np_left @ np_right).tolist()
 
 
 def transpose_matrix(matrix):
-    return np.array(matrix).T.ToList()
+    return np.array(matrix).T.toList()
 
 
 
 def solve_system(matrix, vector):
     np_matr = np.array(matrix)
     np_vect = np.array(vector)
-    return (np.linalg.solve(np_matr, np_vect)).ToList()
+    return (np.linalg.solve(np_matr, np_vect)).toList()
 
 
 def tensor_channel_mean(tensor):
